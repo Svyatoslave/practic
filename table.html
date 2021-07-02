@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Table 6x6</title>
+	<link rel="stylesheet" href="style.css"/>
+	</head>
+<body>
+<h1 class="Nametable">База работников фирмы</h1>
+	<div id="table" class="row clearfix"></div>
+	<table class="table test">
+		<tr  class="bg-info">
+			<td>Фамилия</td> 
+			<td>Должность</td>
+			<td>Возраст</td>
+			<td>Почта</td>
+			<td>Стаж</td>
+			<td>Зарплата</td>
+		</tr>
+
+		<tbody id="myTable">
+			
+		</tbody>
+	</table>
+
+	<script>
+		var myArray = [
+			{'surname':'Пресняков', 'Post':'Менеджер', 'age':'30', 'mail':'presnya@mail.ru','Experience':'1 год','Salary':'62000р'},
+			{'surname':'Калинина', 'Post':'Дизайнер', 'age':'23', 'mail':'kalinina_98@yandex.ru','Experience':'5 лет','Salary':'55000р'},
+			{'surname':'Пахомов', 'Post':'Бэкенд разработчик', 'age':'42', 'mail':'artos111@gmail.com','Experience':'11 лет','Salary':'125000р'},
+			{'surname':'Крулев', 'Post':'Фронтенд разработчик', 'age':'31', 'mail':'artos111@gmail.com','Experience':'3 года','Salary':'75000р'},
+			{'surname':'Холодов', 'Post':'Стажёр', 'age':'20', 'mail':'svyatoslave07@gmail.com','Experience':'1 месяц','Salary':'15000р'},
+		]
+		
+		buildTable(myArray)
+
+
+
+		function buildTable(data){
+			var table = document.getElementById('myTable')
+
+			for (var i = 0; i < data.length; i++){
+				var row = `<tr>
+								<td>${data[i].surname}</td>
+								<td>${data[i].Post}</td>
+								<td>${data[i].age}</td>
+								<td>${data[i].mail}</td>
+								<td>${data[i].Experience}</td>
+								<td>${data[i].Salary}</td>
+						  </tr>`
+				table.innerHTML += row
+
+
+			}
+		}
+
+</script>
+</body>
