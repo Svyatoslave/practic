@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+<script>
+	var arr =  ['a', 1, 2, false, 'b'];
+	var string = [];
+	var numbers = [];
+	var boolean = [];
+	function Sort(arr){
+    for(var i=0; i< arr.length; i++){
+        if(typeof arr[i] == "string"){
+		string.push(arr[i])
+        }else if (typeof arr[i] == "number") {
+            numbers.push(arr[i]); 
+        }else{
+		boolean.push(arr[i]);
+		}
+        }
+console.log(" number:",numbers);
+console.log(" string:",string);
+console.log(" boolean:",boolean);
+}
+Sort(arr);
+	
+		</script>
+		</body>

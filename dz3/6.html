@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+<script>
+var arr = {
+	'name':['Ivan', 'Pavel', 'Vlad'],
+	'age':['44', '25', '15'],
+};
+function Check(arr){
+   for(let i = 0; i < arr.age.length; i++){
+   if (arr.age[i]<=17){
+  console.log(arr.name[i],"имеет возраст",arr.age[i],"и он ребенок");
+  }else if (arr.age[i]<=30){
+  console.log(arr.name[i],"имеет возраст",arr.age[i],"и он молодой");
+  }else if (arr.age[i]<=55){
+  console.log(arr.name[i],"имеет возраст",arr.age[i],"и он зрелый ");
+  }else{
+  console.log(arr.name[i],"имеет возраст",arr.age[i],"и он старый");
+  }
+}   
+}
+ Check(arr);
+			</script>
+			</body>
