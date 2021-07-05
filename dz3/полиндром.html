@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+<script>
+let  data1="а роза упала на лапу Азора";
+let data2='';
+let a=0
+		data1=data1.replace(/ /g,'');
+		data1=data1.toLowerCase();
+		for (let i = 0; i < data1.length; i++){
+		data2+=data1[data1.length-i-1 ];
+		}
+		function check(a){
+		for (let i = 0; i < data1.length; i++){
+		if(data1==data2){
+		a+=0;
+		}else{
+		a++;
+		}
+		}
+		if(a==0){
+		console.log("Это Полином");
+		}else{
+		console.log("Это не полином");
+		}
+		return a;
+		}
+		check(a);
+		
+			
+	
+			
+			</script>
+			</body>

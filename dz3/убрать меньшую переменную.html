@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+<script>
+let  data1= [1,5,6,2,8,3];
+		let a;
+			function Check(data1) {
+			for (let i = 0; i < data1.length; i++){
+			for (let j = 0; j < data1.length - i - 1; j++){
+			if (data1[j]>data1[j+1]){
+			a = data1[j];
+                data1[j] = data1[j + 1];
+                data1[j + 1] = a;
+			}
+			}
+			}
+			data1.shift();
+			return data1;
+			
+			}
+			console.log(Check(data1));
+			</script>
+			</body>
