@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+<script>
+			function Check() {
+			let data="AABB";
+			data = data.toLowerCase();
+			data = data.split(''); 
+			let data2="";
+			for (let i = 0; i < data.length; i++) {
+			if (data.lastIndexOf(data[i]) === data.indexOf(data[i])) { 
+			data2+='(';
+			}else{
+			data2+=')';
+			}
+			}
+			return data2;
+			}
+			console.log(Check());
+			</script>
+			</body>

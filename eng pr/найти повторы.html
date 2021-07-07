@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+<script>
+			function Check() {
+			let c=0;
+			let data="ABBA";
+			data=data.toLowerCase () // Вопрос как можно не используя данный метод игнорировать различие в регистре ?
+			data = data.split(''); 
+			for (var i = 0; i < data.length; i++) {
+			if (data.lastIndexOf(data[i]) === data.indexOf(data[i])) { 
+			
+			}else{
+			data = data.filter((n) => {return n != data[i]});
+			c++;
+			}
+			}
+			return c;
+			}
+			console.log(Check());
+			</script>
+			</body>
